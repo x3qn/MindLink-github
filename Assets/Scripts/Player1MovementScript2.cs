@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player1MovementScript2 : MonoBehaviour
@@ -29,7 +30,9 @@ public class Player1MovementScript2 : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(moveInput * moveSpeed));
 
         // Boden überprüfen
+        bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        //bool wasGrounded = isGrounded; // Vorheriger Zustand speichern
 
         // Horizontale Bewegung
         if (Input.GetKey(KeyCode.A))
@@ -50,6 +53,11 @@ public class Player1MovementScript2 : MonoBehaviour
             StartCoroutine(SprungCooldown()); //Starte Sprung-Delay
         }
 
+        if (isGrounded && !wasGrounded) // Spieler ist gerade gelandet
+        {
+            OnLanding();
+        }
+
         //Spieler-Flip basierend auf Bewegungsrichtung
         if (moveInput > 0)
         {
@@ -60,12 +68,10 @@ public class Player1MovementScript2 : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1); //Links
         }
     }
-
     void OnLanding()
     {
         animator.SetBool("IsJumping", false);
     }
-
     //Ground-Check sichtbar machen
     private void OnDrawGizmos()
     {

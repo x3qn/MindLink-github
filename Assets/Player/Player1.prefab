@@ -45,11 +45,10 @@ GameObject:
   - component: {fileID: 3944266598911764691}
   - component: {fileID: 3561520727048799109}
   - component: {fileID: 1427485103486653689}
-  - component: {fileID: 802602822369121094}
   - component: {fileID: 6847831470345630773}
   m_Layer: 6
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,8 +201,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016660094, y: -0.22}
-  m_Size: {x: 0.889066, y: 0.93}
+  m_Offset: {x: 0.016660094, y: -0.20485467}
+  m_Size: {x: 0.6, y: 0.89970934}
   m_Direction: 0
 --- !u!61 &1427485103486653689
 BoxCollider2D:
@@ -237,7 +236,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.016787767, y: 0.22353417}
+  m_Offset: {x: 0.016787767, y: 0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -248,20 +247,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.88, y: 0.11910641}
+  m_Size: {x: 0.6, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &802602822369121094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7066401313086963185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 145aaeaf99064a04fabd6a177676768c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6847831470345630773
 MonoBehaviour:
   m_ObjectHideFlags: 0

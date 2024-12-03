@@ -7,6 +7,9 @@ TagManager:
   - Player1
   - Player2
   - Killzone
+  - MainCamera2
+  - MainCamera3
+  - MainCamera4
   layers:
   - Default
   - TransparentFX

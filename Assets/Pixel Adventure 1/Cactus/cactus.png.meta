@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51b88847a1522bb4f875565bbe8bb973
+guid: 5892f4ec18217914e97b16f13282ad60
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: On (38x38)_0
+      name: cactus_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 38
-        height: 38
+        y: 186
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 038457c5450875348aeb4716009b24c1
-      internalID: -992851380
+      spriteID: 3a534b6a57890c7489077b96478ddea2
+      internalID: 1044204318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_1
+      name: cactus_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 0
-        width: 38
-        height: 38
+        x: 64
+        y: 186
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b76a178a80034d43b6aa306600a570a
-      internalID: -2038746274
+      spriteID: 4b1c5506d7054014f9f4e8bd5c3de473
+      internalID: 1851885591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_2
+      name: cactus_2
       rect:
         serializedVersion: 2
-        x: 76
-        y: 0
-        width: 38
-        height: 38
+        x: 128
+        y: 186
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a9a4681da9eae84985a92aeddd138ee
-      internalID: 1979112981
+      spriteID: ef0f3b8677722034eb8e9c6f75583d2d
+      internalID: -1362900272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_3
+      name: cactus_3
       rect:
         serializedVersion: 2
-        x: 114
-        y: 0
-        width: 38
-        height: 38
+        x: 192
+        y: 186
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f167ee855da823148847bc130580bd97
-      internalID: -125456738
+      spriteID: 0e2673fb02993a0499c6777dd114412c
+      internalID: -1325611368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_4
+      name: cactus_4
       rect:
         serializedVersion: 2
-        x: 152
-        y: 0
-        width: 38
-        height: 38
+        x: 0
+        y: 122
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9155ded82853604da9a40c060502e29
-      internalID: 980607862
+      spriteID: 1e6d19a176cdec8469e902e28fdd1694
+      internalID: -1714427268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_5
+      name: cactus_5
       rect:
         serializedVersion: 2
-        x: 190
-        y: 0
-        width: 38
-        height: 38
+        x: 64
+        y: 122
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7712ef95c9db8604da00552c02d57474
-      internalID: -687393426
+      spriteID: 147a09b3810902f4baed3e54ba4e8a49
+      internalID: 1488952857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_6
+      name: cactus_6
       rect:
         serializedVersion: 2
-        x: 228
-        y: 0
-        width: 38
-        height: 38
+        x: 128
+        y: 122
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9dbfb471e5c9c44484f48de83ace1e8
-      internalID: -1788717361
+      spriteID: 2f71f54183832d7419a50f57d8c7f3fc
+      internalID: 423066002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: On (38x38)_7
+      name: cactus_7
       rect:
         serializedVersion: 2
-        x: 266
-        y: 0
-        width: 38
-        height: 38
+        x: 192
+        y: 122
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f8d6586f5a42a44294456f51cc7d851
-      internalID: 992566197
+      spriteID: 7839d41b310df344f8328951f12d940a
+      internalID: 824058468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cactus_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9e88d34d3cd2a48989938937dc87da
+      internalID: -1670636066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cactus_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1331bf1ebfc9d974ab9e31f799dd6813
+      internalID: -1264339459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cactus_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fbf4c877219e1439010a029a805777
+      internalID: 1810007582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cactus_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c502b0dd6ce864da61cd5cdbcf5396
+      internalID: 1246526264
       vertices: []
       indices: 
       edges: []
@@ -288,14 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      On (38x38)_0: -992851380
-      On (38x38)_1: -2038746274
-      On (38x38)_2: 1979112981
-      On (38x38)_3: -125456738
-      On (38x38)_4: 980607862
-      On (38x38)_5: -687393426
-      On (38x38)_6: -1788717361
-      On (38x38)_7: 992566197
+      cactus_0: 1044204318
+      cactus_1: 1851885591
+      cactus_10: 1810007582
+      cactus_11: 1246526264
+      cactus_2: -1362900272
+      cactus_3: -1325611368
+      cactus_4: -1714427268
+      cactus_5: 1488952857
+      cactus_6: 423066002
+      cactus_7: 824058468
+      cactus_8: -1670636066
+      cactus_9: -1264339459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
