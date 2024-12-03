@@ -502,9 +502,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1107531983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3fcf0c9adca6d641bedc56c4f475126, type: 3}
+  m_Script: {fileID: 11500000, guid: 822b189eac874624d8f87876f07f8b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartDelay: 0.05
 --- !u!61 &1107531987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -652,11 +653,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1874563228492842958, guid: 9d3ccd180b745604c80c876515e5beeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.02
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 1874563228492842958, guid: 9d3ccd180b745604c80c876515e5beeb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.67
+      value: -0.69
       objectReference: {fileID: 0}
     - target: {fileID: 1874563228492842958, guid: 9d3ccd180b745604c80c876515e5beeb, type: 3}
       propertyPath: m_LocalPosition.z
