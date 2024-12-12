@@ -1,0 +1,45 @@
+{
+    "name": "Player1Controller",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "a48b8fa9-9657-46a6-9ba3-161c30658f7f",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "b0f64a7a-22e8-41f8-84da-01c0882b299d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5312877a-9dda-48cd-b3aa-233fa19471be",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89e3d22e-711d-42fc-8766-d4bc30145c85",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
