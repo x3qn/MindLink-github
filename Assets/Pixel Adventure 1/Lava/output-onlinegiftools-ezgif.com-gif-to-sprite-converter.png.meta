@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa5a69d74577e694bb23abdacbcde4c2
+guid: aff931d7aba16a34faa933c49d4a73a3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,169 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump (28x28)_0
+      name: output-onlinegiftools-ezgif.com-gif-to-sprite-converter_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 190
+        width: 1200
+        height: 818
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a23a4ad8a96660a4da2d73d78a155471
-      internalID: 1359067481
+      spriteID: 1dda300daec6b014a9aaf9b34a3322ed
+      internalID: 718003577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump (28x28)_1
+      name: output-onlinegiftools-ezgif.com-gif-to-sprite-converter_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1200
+        y: 190
+        width: 1200
+        height: 818
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f7ef39999058cd4ea5c03e76e9ff982
-      internalID: 2147239186
+      spriteID: f878feaf0537f7e4aafb2b4c4fcc3424
+      internalID: 530576845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump (28x28)_2
+      name: output-onlinegiftools-ezgif.com-gif-to-sprite-converter_2
       rect:
         serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2400
+        y: 190
+        width: 1200
+        height: 818
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b0f50ebf43620d4dbb4132bf4b6fbd3
-      internalID: 1362158684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump (28x28)_3
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d7191eba319c4d43b76342dacdf37ae
-      internalID: -803321118
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump (28x28)_4
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d2f28e9cf62dd74a9b5d71b824a2e35
-      internalID: 279951957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump (28x28)_5
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72b6b7f0480f0a540b07e26a3dd898d2
-      internalID: -575844940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump (28x28)_6
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1dcd2edb57c53534c95e2517f66f1d5a
-      internalID: 1919735467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump (28x28)_7
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a9e75f778c92714f81f5fa2930560f2
-      internalID: 197833771
+      spriteID: dd2041130723fad44ba5fc8ef535b5e2
+      internalID: -1680309294
       vertices: []
       indices: 
       edges: []
@@ -288,14 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump (28x28)_0: 1359067481
-      Jump (28x28)_1: 2147239186
-      Jump (28x28)_2: 1362158684
-      Jump (28x28)_3: -803321118
-      Jump (28x28)_4: 279951957
-      Jump (28x28)_5: -575844940
-      Jump (28x28)_6: 1919735467
-      Jump (28x28)_7: 197833771
+      output-onlinegiftools-ezgif.com-gif-to-sprite-converter_0: 718003577
+      output-onlinegiftools-ezgif.com-gif-to-sprite-converter_1: 530576845
+      output-onlinegiftools-ezgif.com-gif-to-sprite-converter_2: -1680309294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
