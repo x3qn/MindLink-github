@@ -45,7 +45,7 @@ public class FakeBlockScript : MonoBehaviour
             Debug.Log("Beide Spieler im Trigger! Umschalten in 3 Sekunden...");
 
             // 3 Sekunden Verzögerung und dann Rigidbody auf Dynamic setzen
-            Invoke(nameof(SwitchToDynamic), 3f);
+            Invoke(nameof(SwitchToDynamic), 2f);
         }
     }
 
@@ -72,7 +72,7 @@ public class FakeBlockScript : MonoBehaviour
             Debug.Log("Rigidbody ist jetzt Dynamic!");
 
             // Block nach weiteren 3 Sekunden zerstören
-            Invoke(nameof(DestroyBlock), 3f);
+            Invoke(nameof(DestroyBlock), 1f);
         }
     }
 
