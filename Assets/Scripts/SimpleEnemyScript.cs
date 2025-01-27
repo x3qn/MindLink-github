@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SimpleEnemyScript : MonoBehaviour
 {
     [Header("Bewegungseinstellungen")]
-    public float speed = 2f; // Geschwindigkeit des Goombas
+    public float speed = 2f; // Geschwindigkeit des Slime
     public Transform groundCheck; // Punkt zum Überprüfen des Bodenkontakts
     public float groundCheckRadius = 0.1f; // Radius des Ground-Check-Kreises
     public LayerMask wallLayer; // Layer, auf dem sich die Wände befinden
@@ -16,7 +16,7 @@ public class SimpleEnemyScript : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool movingRight = true;
-    private bool isDead = false; // Status des Goombas
+    private bool isDead = false; // Status des Slime
 
     private const int Player1Layer = 6; // Layer für Spieler 1
     private const int Player2Layer = 7; // Layer für Spieler 2
@@ -28,12 +28,12 @@ public class SimpleEnemyScript : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return; // Goomba bewegt sich nicht, wenn er tot ist
+        if (isDead) return; // Slime bewegt sich nicht, wenn er tot ist
 
         // Bewegung in die aktuelle Richtung
         rb.velocity = new Vector2(movingRight ? speed : -speed, rb.velocity.y);
 
-        // Überprüfen, ob vor dem Goomba eine Wand ist
+        // Überprüfen, ob vor dem Slime eine Wand ist
         if (IsHittingWall())
         {
             Flip();
@@ -69,7 +69,7 @@ public class SimpleEnemyScript : MonoBehaviour
 
             if (playerRb != null)
             {
-                // Spieler kommt von oben: Goomba stirbt
+                // Spieler kommt von oben: Slime stirbt
                 if (playerRb.velocity.y < 0)
                 {
                     Die();
@@ -86,10 +86,10 @@ public class SimpleEnemyScript : MonoBehaviour
 
     private void Die()
     {
-        isDead = true; // Status des Goombas auf "tot" setzen
+        isDead = true; // Status des Slime auf "tot" setzen
 
         // Optional: Animation oder Effekt beim Sterben
-        Destroy(gameObject, 0.2f); // Goomba verschwindet nach kurzer Zeit
+        Destroy(gameObject, 0.2f); // Slime verschwindet nach kurzer Zeit
     }
 
     private IEnumerator RestartLevelWithDelay()
