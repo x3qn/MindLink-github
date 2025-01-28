@@ -4210,13 +4210,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1236319631804549763, guid: bb2b41c2aab38c04eaddee855d44b66f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b5261312997ca8f4c8bc2d3b9360a832, type: 3}
     - target: {fileID: 4148410709065192756, guid: bb2b41c2aab38c04eaddee855d44b66f, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4148410709065192756, guid: bb2b41c2aab38c04eaddee855d44b66f, type: 3}
       propertyPath: m_GravityScale
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6587586930164785109, guid: bb2b41c2aab38c04eaddee855d44b66f, type: 3}
       propertyPath: m_Material
