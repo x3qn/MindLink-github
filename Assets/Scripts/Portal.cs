@@ -1,34 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    [Header("Target Portal")]
-    [Tooltip("Das Zielportal, zu dem teleportiert werden soll.")]
-    public Transform targetPortal;
+    private HashSet<GameObject> portalObjects = new HashSet<GameObject>();
 
-    [Header("Spieler-Layer")]
-    [Tooltip("Layer, die für Spieler verwendet werden.")]
-    public LayerMask playerLayers; // Hier werden die Layer für Player1 und Player2 eingestellt.
+    [SerializeField] private Transform destination;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Prüfen, ob das Objekt in einem der angegebenen Spieler-Layer ist
-        if (IsInPlayerLayer(other.gameObject) && targetPortal != null)
+        if (portalObjects.Contains(collision.gameObject))
         {
-            TeleportPlayer(other.gameObject);
+            return;
         }
+
+        if (destination.TryGetComponent(out Portal destinationPortal))
+        {
+            destinationPortal.portalObjects.Add(collision.gameObject);
+        }
+
+        collision.transform.position = destination.position;
     }
 
-    private void TeleportPlayer(GameObject player)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        // Spielerposition zur Zielportalposition verschieben mit einem kleinen Versatz
-        player.transform.position = targetPortal.position + targetPortal.forward * 1.5f;
-        player.transform.rotation = targetPortal.rotation;
-    }
-
-    private bool IsInPlayerLayer(GameObject obj)
-    {
-        // Überprüft, ob das Objekt in einem der spezifizierten Layer ist
-        return (playerLayers.value & (1 << obj.layer)) > 0;
+        portalObjects.Remove(collision.gameObject);
     }
 }

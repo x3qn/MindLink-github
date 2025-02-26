@@ -13,7 +13,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void Update()
     {
-        // Überprüfen, ob die Escape-Taste gedrückt wurde
+        //Überprüfen, ob die Escape-Taste gedrückt wurde
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -34,16 +34,16 @@ public class GameManagerScript : MonoBehaviour
 
     private void PauseGame()
     {
-        pauseMenuUI.SetActive(true); // Pause-Menü anzeigen
-        Time.timeScale = 0f;        // Spielzeit pausieren
+        pauseMenuUI.SetActive(true); //Pause-Menü anzeigen
+        Time.timeScale = 0f;        //Spielzeit pausieren
         isPaused = true;
         Debug.Log("Spiel pausiert.");
     }
 
     public void ResumeGame()
     {
-        pauseMenuUI.SetActive(false); // Pause-Menü ausblenden
-        Time.timeScale = 1f;          // Spielzeit fortsetzen
+        pauseMenuUI.SetActive(false); //Pause-Menü ausblenden
+        Time.timeScale = 1f;          // pielzeit fortsetzen
         isPaused = false;
         Debug.Log("Spiel fortgesetzt.");
     }

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    // Diese Methode wird aufgerufen, um ein bestimmtes Level zu laden
     public void LoadLevel(string levelName)
     {
         if (!string.IsNullOrEmpty(levelName))
@@ -19,22 +18,9 @@ public class MainMenuScript : MonoBehaviour
         }
     }
 
-    // Methode, um das Spiel zu beenden
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
     }
 }
-//{
-//    public void PlayGame()
-//    {
-//        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-//    }
-
-//    public void QuitGame()
-//    {
-//        Debug.Log("Quit");
-//        Application.Quit();
-//    }
-//}
