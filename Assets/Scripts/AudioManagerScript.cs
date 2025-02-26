@@ -12,8 +12,11 @@ public class AudioManagerScript : MonoBehaviour
     void Start()
     {
         masterVolumeSlider.value = audioSettings.masterVolume;
-        musicVolumeSlider.value = audioSettings.masterVolume;
-        sfxVolumeSlider.value = audioSettings.masterVolume;
+        OnSliderChange(0);
+        musicVolumeSlider.value = audioSettings.musicVolume;
+        OnSliderChange(1);
+        sfxVolumeSlider.value = audioSettings.sfxVolume;
+        OnSliderChange(2);
     }
 
     public void OnSliderChange(int id)
@@ -29,12 +32,12 @@ public class AudioManagerScript : MonoBehaviour
                 break;
             case 1:
                 volume = musicVolumeSlider.value;
-                audioSettings.masterVolume = volume;
+                audioSettings.musicVolume = volume;
                 audioMixer.SetFloat("MusicVolume", volume);
                 break;
             case 2:
                 volume = sfxVolumeSlider.value;
-                audioSettings.masterVolume = volume;
+                audioSettings.sfxVolume = volume;
                 audioMixer.SetFloat("SFXVolume", volume);
                 break;
         }
