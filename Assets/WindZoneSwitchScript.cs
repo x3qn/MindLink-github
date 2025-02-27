@@ -50,7 +50,8 @@ public class WindZoneSwitchScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player2")) // Prüfen, ob der Spieler den Schalter berührt
+        // Überprüfen, ob der Collider "Player1" oder "Player2" ist
+        if (other.CompareTag("Player1") || other.CompareTag("Player2"))
         {
             ToggleWindZone();
         }
