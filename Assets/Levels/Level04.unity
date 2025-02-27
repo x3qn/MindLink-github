@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8049280533214948200, guid: b57187543f1a1af47b14e3313dc576c3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2478edcab4e75454da1605af745c4028, type: 3}
     - target: {fileID: 8994491583002346260, guid: b57187543f1a1af47b14e3313dc576c3, type: 3}
       propertyPath: sfxVolumeSlider
       value: 
