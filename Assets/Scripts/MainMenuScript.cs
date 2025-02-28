@@ -23,4 +23,9 @@ public class MainMenuScript : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
+    public void SetFullscreen (bool fullscreen)
+    {
+        Screen.fullScreen = fullscreen;
+    }
 }
