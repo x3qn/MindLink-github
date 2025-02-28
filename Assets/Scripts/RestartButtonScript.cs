@@ -7,7 +7,7 @@ public class RestartButtonScript : MonoBehaviour
 {
     public void RestartLevel()
     {
-        // Lädt die aktuell aktive Szene neu
+        //Laedt die aktuell aktive Szene neu
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

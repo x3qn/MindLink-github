@@ -10,7 +10,7 @@ public class Scene1TriggerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Überprüfen, welcher Spieler den Trigger betreten hat
+        //Ueberpruefen, welcher Spieler den Trigger betreten hat
         if (other.CompareTag("Player1"))
         {
             player1InZone = true;
@@ -20,7 +20,7 @@ public class Scene1TriggerScript : MonoBehaviour
             player2InZone = true;
         }
 
-        // Starten der Coroutine, wenn beide Spieler im Collider sind
+        // tarten der Coroutine --> beide Spieler im Collider
         if (player1InZone && player2InZone)
         {
             StartCoroutine(LoadNextScene());
@@ -29,7 +29,7 @@ public class Scene1TriggerScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        // Überprüfen, welcher Spieler den Trigger verlassen hat
+        //Ueberpruefen, welcher Spieler den Trigger verlassen hat
         if (other.CompareTag("Player1"))
         {
             player1InZone = false;
@@ -39,7 +39,7 @@ public class Scene1TriggerScript : MonoBehaviour
             player2InZone = false;
         }
 
-        // Abbrechen der Coroutine, falls einer der Spieler den Collider verlässt
+        //Abbrechen der Coroutine, falls einer der Spieler den Collider verlaesst
         if (!player1InZone || !player2InZone)
         {
             StopAllCoroutines();
@@ -48,20 +48,20 @@ public class Scene1TriggerScript : MonoBehaviour
 
     private IEnumerator LoadNextScene()
     {
-        // Berechne den Index der nächsten Szene
+        //Berechne den Index der naechsten Szene
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        // Überprüfen, ob der Index gültig ist
+        //Ueberpruefen, ob der Index gueltig ist
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
         else
         {
-            Debug.LogWarning("Keine weitere Szene verfügbar!");
+            Debug.LogWarning("Keine weitere Szene verfuegbar!");
         }
 
-        // Füge diese Zeile hinzu, um den Fehler zu vermeiden
+        //Fuege diese Zeile hinzu, um den Fehler zu vermeiden
         yield return null;
     }
 }

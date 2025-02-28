@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    [Header("Pause Menü")]
-    [Tooltip("Das UI-Panel, das das Pause-Menü darstellt.")]
+    [Header("Pause Menu")]
+    [Tooltip("Das UI-Panel, das das Pause-Menu darstellt.")]
     public GameObject pauseMenuUI;
 
     private bool isPaused = false;
 
     private void Update()
     {
-        //Überprüfen, ob die Escape-Taste gedrückt wurde
+        //Wurde Escape-Taste gedrueckt
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -34,7 +34,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void PauseGame()
     {
-        pauseMenuUI.SetActive(true); //Pause-Menü anzeigen
+        pauseMenuUI.SetActive(true); //Pause-Menue anzeigen
         Time.timeScale = 0f;        //Spielzeit pausieren
         isPaused = true;
         Debug.Log("Spiel pausiert.");
@@ -42,8 +42,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void ResumeGame()
     {
-        pauseMenuUI.SetActive(false); //Pause-Menü ausblenden
-        Time.timeScale = 1f;          // pielzeit fortsetzen
+        pauseMenuUI.SetActive(false); //Pause-Menue ausblenden
+        Time.timeScale = 1f;          //Spielzeit fortsetzen
         isPaused = false;
         Debug.Log("Spiel fortgesetzt.");
     }

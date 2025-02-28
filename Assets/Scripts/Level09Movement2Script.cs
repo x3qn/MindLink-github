@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Level09Movement2Script : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Geschwindigkeit des Spielers
-    public float jumpForce = 10f; // Sprungkraft
-    public LayerMask groundLayer; // Layer, der den Boden repräsentiert
-    public Transform groundCheck; // Punkt, um zu prüfen, ob der Spieler am Boden ist
-    public float groundCheckRadius = 0.2f; // Radius der Bodenerkennung
+    public float moveSpeed = 5f; 
+    public float jumpForce = 10f; 
+    public LayerMask groundLayer;
+    public Transform groundCheck; 
+    public float groundCheckRadius = 0.2f; 
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -22,22 +22,17 @@ public class Level09Movement2Script : MonoBehaviour
 
     void Update()
     {
-        // Überprüfen, ob der Spieler am Boden ist
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        // Sprung-Eingabe
         if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             Jump();
         }
 
-        // Setze den Animationsparameter "Speed" basierend auf der Bewegung
         animator.SetFloat("Speed", moveSpeed);
     }
 
     void FixedUpdate()
     {
-        // Spieler bewegt sich konstant nach rechts durch direkte Positionsänderung
         transform.position += Vector3.right * moveSpeed * Time.fixedDeltaTime;
     }
 
@@ -48,7 +43,6 @@ public class Level09Movement2Script : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        // Zeichnet den GroundCheck-Radius zur visuellen Hilfe
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;

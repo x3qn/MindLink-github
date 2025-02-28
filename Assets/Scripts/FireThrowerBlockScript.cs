@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FireThrowerBlockScript : MonoBehaviour
 {
-    public Animator animator;  // Referenz auf den Animator
-    public float interval = 2; // Intervall zwischen den Zustandswechseln
+    public Animator animator;  //Referenz auf den Animator
+    public float interval = 2; //Intervall zwischen den Zustandswechseln
 
-    private bool isThrowing = false; // Aktueller Zustand
+    private bool isThrowing = false; //Aktueller Zustand
 
     private void Start()
     {
-        // Coroutine starten
+        // oroutine starten
         StartCoroutine(SwitchThrowingState());
     }
 
@@ -19,13 +19,13 @@ public class FireThrowerBlockScript : MonoBehaviour
     {
         while (true)
         {
-            // Zustand umkehren
+            //Zustand umkehren
             isThrowing = !isThrowing;
 
-            // Zustand auf den Animator setzen
+            //Zustand auf den Animator setzen
             animator.SetBool("IsThrowing", isThrowing);
 
-            // Warten, bevor der Zustand erneut gewechselt wird
+            //Warten, bevor der Zustand erneut gewechselt wird
             yield return new WaitForSeconds(interval);
         }
     }

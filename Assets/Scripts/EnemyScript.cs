@@ -7,14 +7,14 @@ public class EnemyScript : MonoBehaviour
 {
     public Transform player1; //Transform von Player1
     public Transform player2; //Transform von Player2
-    public float chaseSpeed = 3.5f;// Geschwindigkeit des Gegners
-    public float stoppingDistance = 1.5f;// Distanz, bei der der Gegner stoppt
+    public float chaseSpeed = 3.5f;//Geschwindigkeit des Gegners
+    public float stoppingDistance = 1.5f;//Distanz, bei der der Gegner stoppt
 
     private NavMeshAgent navMeshAgent;
 
     void Start()
     {
-        // NavMeshAgent initialisieren
+        //NavMeshAgent initialisieren
         navMeshAgent = GetComponent<NavMeshAgent>();
         if (navMeshAgent == null)
         {

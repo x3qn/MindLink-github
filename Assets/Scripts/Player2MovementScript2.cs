@@ -28,22 +28,22 @@ public class Player2MovementScript2 : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(moveInput * moveSpeed));
 
-        // Boden überprüfen
+        //Boden ueberpruefen
         bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        // Horizontale Bewegung
+        //Horizontale Bewegung
         if (Input.GetKey(KeyCode.LeftArrow))
             moveInput = -1f;
         else if (Input.GetKey(KeyCode.RightArrow))
             moveInput = 1f;
         else
-            moveInput = 0f; //Bewegung anhalten (keine Taste gedrückt)
+            moveInput = 0f; //Bewegung anhalten
 
         //Rigidbody-Geschwindigkeit basierend auf moveInput aktualisieren
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        // Vertikale Bewegung (nur wenn springen erlaubt ist, Spieler auf dem Boden ist, und der Sprung "bereit" ist)
+        //Vertikale Bewegung
         if (canJump && isGrounded && jumpReady && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightShift)))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -51,12 +51,12 @@ public class Player2MovementScript2 : MonoBehaviour
             StartCoroutine(SprungCooldown()); //Starte Sprung-Delay
         }
 
-        if (isGrounded && !wasGrounded) // Spieler ist gerade gelandet
+        if (isGrounded && !wasGrounded) //Spieler ist gerade gelandet
         {
             OnLanding();
         }
 
-        // Spieler-Flip basierend auf Bewegungsrichtung
+        //Spieler-Flip basierend auf Bewegungsrichtung
         if (moveInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1); //Rechts
@@ -72,7 +72,7 @@ public class Player2MovementScript2 : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
-    // Ground-Check sichtbar machen
+    //Ground-Check sichtbar machen
     private void OnDrawGizmos()
     {
         if (groundCheck != null)
@@ -82,11 +82,11 @@ public class Player2MovementScript2 : MonoBehaviour
         }
     }
 
-    // Coroutine für den Sprung-Delay
+    //Coroutine fuer den Sprung-Delay
     private IEnumerator SprungCooldown()
     {
-        jumpReady = false; //Sprung vorübergehend gesperrt
-        yield return new WaitForSeconds(jumpDelay); //Warte Zeit für den Delay
+        jumpReady = false; //Sprung voruebergehend gesperrt
+        yield return new WaitForSeconds(jumpDelay); //Warte Zeit fuer den Delay
         jumpReady = true; //Sprung wieder erlaubt
     }
 }

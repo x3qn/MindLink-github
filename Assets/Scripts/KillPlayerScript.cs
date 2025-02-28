@@ -13,20 +13,20 @@ public class KillPlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Überprüfen, ob das Objekt den Layer Player1Layer oder Player2Layer hat
+        //Ueberpruefen, ob das Objekt den Layer Player1Layer oder Player2Layer hat
         if (collision.gameObject.layer == Player1Layer || collision.gameObject.layer == Player2Layer)
         {
-            // Coroutine starten, um das Level mit Verzögerung neu zu laden
+            //Coroutine starten, um das Level mit Verzoegerung neu zu laden
             StartCoroutine(RestartLevelWithDelay());
         }
     }
 
     private IEnumerator RestartLevelWithDelay()
     {
-        // Warte für die angegebene Zeit
+        //Warte für die angegebene Zeit
         yield return new WaitForSeconds(restartDelay * Time.deltaTime);
 
-        // Level neu laden
+        //Level neu laden
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

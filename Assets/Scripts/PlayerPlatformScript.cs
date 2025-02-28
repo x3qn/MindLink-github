@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerPlatformScript : MonoBehaviour
 {
-    public float moveSpeed = 2f; // Geschwindigkeit, mit der sich die Plattform nach oben bewegt
-    public float targetHeight = 5f; // Zielhöhe, die die Plattform erreichen soll
+    public float moveSpeed = 2f; //Geschwindigkeit, mit der sich die Plattform nach oben bewegt
+    public float targetHeight = 5f; //Zielhoehe, die die Plattform erreichen soll
 
     private bool player1OnPlatform = false;
     private bool player2OnPlatform = false;
@@ -15,29 +15,29 @@ public class PlayerPlatformScript : MonoBehaviour
 
     void Start()
     {
-        // Speichere die Startposition der Plattform
+        //Speichere die Startposition der Plattform
         initialPosition = transform.position;
 
-        // Hole den Animator von der Plattform
+        //Hole den Animator von der Plattform
         animator = GetComponent<Animator>();
         if (animator == null)
         {
-            Debug.LogWarning("Animator nicht gefunden! Bitte füge einen Animator mit dem Parameter 'BothPlayersOnPlatform' hinzu.");
+            Debug.LogWarning("Animator nicht gefunden! Bitte fuege einen Animator mit dem Parameter 'BothPlayersOnPlatform' hinzu.");
         }
     }
 
     void Update()
     {
-        // Überprüfe, ob beide Spieler auf der Plattform sind
+        //Ueberpruefe, ob beide Spieler auf der Plattform sind
         bool bothPlayersOnPlatform = player1OnPlatform && player2OnPlatform;
 
-        // Setze den Animator-Parameter
+        //Setze den Animator-Parameter
         if (animator != null)
         {
             animator.SetBool("BothPlayersOnPlatform", bothPlayersOnPlatform);
         }
 
-        // Bewege die Plattform, wenn beide Spieler darauf stehen
+        //Bewege die Plattform, wenn beide Spieler darauf stehen
         if (bothPlayersOnPlatform)
         {
             MovePlatformUp();
@@ -50,7 +50,7 @@ public class PlayerPlatformScript : MonoBehaviour
 
     private void MovePlatformUp()
     {
-        // Bewege die Plattform nach oben bis zur Zielhöhe
+        //Bewege die Plattform nach oben bis zur Zielhoehe
         if (transform.position.y < initialPosition.y + targetHeight)
         {
             transform.position += Vector3.up * moveSpeed * Time.deltaTime;
@@ -59,12 +59,12 @@ public class PlayerPlatformScript : MonoBehaviour
 
     private void MovePlatformDown()
     {
-        // Bewege die Plattform zurück zur Startposition
+        //Bewege die Plattform zurueck zur Startposition
         if (transform.position.y > initialPosition.y)
         {
             transform.position -= Vector3.up * moveSpeed * Time.deltaTime;
 
-            // Stelle sicher, dass sie nicht unter die Startposition sinkt
+            //Stelle sicher, dass sie nicht unter die Startposition sinkt
             if (transform.position.y < initialPosition.y)
             {
                 transform.position = initialPosition;
@@ -74,13 +74,13 @@ public class PlayerPlatformScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Überprüfe, ob Spieler 1 die Plattform betritt
+        //Ueberpruefe, ob Spieler 1 die Plattform betritt
         if (other.gameObject.layer == LayerMask.NameToLayer("Player1Layer"))
         {
             player1OnPlatform = true;
         }
 
-        // Überprüfe, ob Spieler 2 die Plattform betritt
+        //Ueberpruefe, ob Spieler 2 die Plattform betritt
         if (other.gameObject.layer == LayerMask.NameToLayer("Player2Layer"))
         {
             player2OnPlatform = true;
@@ -89,13 +89,13 @@ public class PlayerPlatformScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Überprüfe, ob Spieler 1 die Plattform verlässt
+        //Ueberpruefe, ob Spieler 1 die Plattform verlaesst
         if (other.gameObject.layer == LayerMask.NameToLayer("Player1Layer"))
         {
             player1OnPlatform = false;
         }
 
-        // Überprüfe, ob Spieler 2 die Plattform verlässt
+        //Ueberpruefe, ob Spieler 2 die Plattform verlaesst
         if (other.gameObject.layer == LayerMask.NameToLayer("Player2Layer"))
         {
             player2OnPlatform = false;

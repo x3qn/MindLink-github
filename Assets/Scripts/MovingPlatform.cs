@@ -8,7 +8,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.CompareTag("Player1") || other.CompareTag("Player2"))
         {
-            // Spieler wird als Kind der Plattform hinzugefügt
+            //Spieler als Child der Plattform hinzugefuegen
             other.transform.SetParent(transform);
         }
     }
@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.CompareTag("Player1") || other.CompareTag("Player2"))
         {
-            // Spieler wird von der Plattform losgelöst
+            //Spieler wird von der Plattform losgeloest
             other.transform.SetParent(null);
         }
     }

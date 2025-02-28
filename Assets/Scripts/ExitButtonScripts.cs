@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ExitButtonScript : MonoBehaviour
 {
-    // Diese Methode wird aufgerufen, wenn der Exit-Button geklickt wird
+    //Wenn Exit-Button geklickt wird
     public void ExitGame()
     {
-        // Während des Debuggens in der Editor-Umgebung
+        //Waehrend des Debuggens in der Editor-Umgebung
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-        // Schließt die Anwendung, wenn sie gebaut und ausgeführt wird
+        //Schließt Anwendung, wenn sie gebaut und ausgeführt wird
         Application.Quit();
 #endif
-        Debug.Log("Spiel beendet."); // Optional: Log für Debugging
+        Debug.Log("Spiel beendet.");
     }
 }

@@ -24,19 +24,19 @@ public class Level4CameraScript : MonoBehaviour
         float player1Height = player1.transform.position.y;
         float player2Height = player2.transform.position.y;
 
-        // Kamera auf -23 setzen, wenn beide Spieler höher als -28 sind
+        //Kamera auf -23 setzen, wenn beide Spieler hoeher als -28 sind
         if (player1Height > -27 && player2Height > -27 && transform.position.y != -23f)
         {
             MoveCameraTo(-23f);
         }
 
-        // Kamera auf -13 setzen, wenn beide Spieler höher als -19 sind
+        //Kamera auf -13 setzen, wenn beide Spieler hoeher als -19 sind
         if (player1Height > -17 && player2Height > -17 && transform.position.y != -13f)
         {
             MoveCameraTo(-13f);
         }
 
-        // Kamera auf -3 setzen, wenn beide Spieler höher als 1 sind
+        // Kamera auf -3 setzen, wenn beide Spieler hoeher als 1 sind
         if (player1Height > -9 && player2Height > -9 && transform.position.y != -3f)
         {
             MoveCameraTo(-3f);

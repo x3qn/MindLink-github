@@ -2,43 +2,42 @@ using UnityEngine;
 
 public class WindZoneSwitchScript : MonoBehaviour
 {
-    public GameObject[] windZones; // Array für die WindZones
-    public Animator switchAnimator; // Referenz zum Animator
-    public float cooldownTime = 1f; // Cooldown-Zeit in Sekunden
+    public GameObject[] windZones; 
+    public Animator switchAnimator;
+    public float cooldownTime = 1f;
 
-    private int activeIndex = -1; // Speichert die aktuell aktive WindZone (-1 bedeutet keine aktiv)
-    private bool canToggle = true; // Cooldown-Steuerung
-    private bool isSwitchOn = false; // Steuert die Animation (wechselt zwischen an/aus)
+    private int activeIndex = -1; 
+    private bool canToggle = true;
+    private bool isSwitchOn = false;
 
-    // Start wird beim Spielstart aufgerufen
     private void Start()
     {
-        // Automatisch einmal die WindZone umschalten
+        //Automatisch einmal die WindZone umschalten
         ToggleWindZone();
     }
 
     private void ToggleWindZone()
     {
-        if (!canToggle) return; // Falls Cooldown aktiv, nichts tun
+        if (!canToggle) return; //Falls Cooldown aktiv, nichts tun
 
-        // Deaktiviere die aktuell aktive WindZone
+        //Deaktiviere die aktuell aktive WindZone
         if (activeIndex >= 0)
         {
             windZones[activeIndex].SetActive(false);
         }
 
-        // Aktiviere die nächste WindZone (zyklisch wechseln)
+        //Aktiviere die naechste WindZone
         activeIndex = (activeIndex + 1) % windZones.Length;
         windZones[activeIndex].SetActive(true);
 
-        // Switch-Animation wechseln
+        //Switch-Animation wechseln
         isSwitchOn = !isSwitchOn;
         if (switchAnimator != null)
         {
             switchAnimator.SetBool("Switch_On", isSwitchOn);
         }
 
-        // Cooldown starten
+        //Cooldown starten
         canToggle = false;
         Invoke(nameof(ResetCooldown), cooldownTime);
     }
@@ -50,7 +49,7 @@ public class WindZoneSwitchScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Überprüfen, ob der Collider "Player1" oder "Player2" ist
+        //Ueberprüfen, ob Collider "Player1" oder "Player2" ist
         if (other.CompareTag("Player1") || other.CompareTag("Player2"))
         {
             ToggleWindZone();

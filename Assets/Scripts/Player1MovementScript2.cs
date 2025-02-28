@@ -29,23 +29,22 @@ public class Player1MovementScript2 : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(moveInput * moveSpeed));
 
-        //Boden überprüfen
+        //GroundCheck
         bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-        //bool wasGrounded = isGrounded; //Vorheriger Zustand speichern
 
-        // Horizontale Bewegung
+        //Horizontale Bewegung
         if (Input.GetKey(KeyCode.A))
             moveInput = -1f;
         else if (Input.GetKey(KeyCode.D))
             moveInput = 1f;
         else
-            moveInput = 0f; //Bewegung anhalten (keine Taste gedrückt)
+            moveInput = 0f; //Bewegung anhalten
 
         //Rigidbody-Geschwindigkeit basierend auf moveInput aktualisieren
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        //Vertikale Bewegung (nur wenn springen erlaubt ist, Spieler auf dem Boden ist, und der Sprung "bereit" ist)
+        //Vertikale Bewegung
         if (canJump && isGrounded && jumpReady && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -82,11 +81,11 @@ public class Player1MovementScript2 : MonoBehaviour
         }
     }
 
-    //Coroutine für den Sprung-Delay
+    //Coroutine fuer den Sprung-Delay
     private IEnumerator SprungCooldown()
     {
-        jumpReady = false; //Sprung vorübergehend gesperrt
-        yield return new WaitForSeconds(jumpDelay); //Warte Zeit für den Delay
+        jumpReady = false; //Sprung voruebergehend gesperrt
+        yield return new WaitForSeconds(jumpDelay); //Warte Zeit fuer den Delay
         jumpReady = true; //Sprung wieder erlaubt
     }
 }
