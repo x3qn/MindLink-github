@@ -285,14 +285,14 @@ RectTransform:
   m_GameObject: {fileID: 55105040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3.6312656}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.2, y: 3.2, z: 3.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 724063838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.9548035, y: 19.7}
+  m_AnchoredPosition: {x: 1.9548035, y: -25}
   m_SizeDelta: {x: -165.745, y: -231.64505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55105042
@@ -315,9 +315,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '...
+  m_text: 'Assets:
 
-'
+    Pixel Adventure 1 by PixelFrog Assets
+
+    Pixel Adventure
+    2 by PixelFrog Assets
+
+    Pixel Dimensional Portal 32x32 by Pixelnauta
+
+    Pixel
+    Planets by Faktory
+
+    PixelArt Starfields by Space-SphereMaps
+
+    Nature Pixel
+    Art Base Assets (Free) by Unity Asset Store
+
+    Music:
+
+    Music Loop Bundle
+    by TallBeard
+
+    Code:
+
+    Portal Code by bendux on GitHub'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 37001bd9a26983b4e91e30979888add6, type: 2}
   m_sharedMaterial: {fileID: 383356232773709373, guid: 37001bd9a26983b4e91e30979888add6, type: 2}
@@ -344,8 +366,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -356,9 +378,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -15.23
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -0.52
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -770,8 +792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.9548035, y: 113.4}
-  m_SizeDelta: {x: -165.745, y: -231.64505}
+  m_AnchoredPosition: {x: 1.9548035, y: 186.91125}
+  m_SizeDelta: {x: -165.745, y: -231.82251}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132562363
 MonoBehaviour:
@@ -4790,7 +4812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9548035, y: -66.6}
+  m_AnchoredPosition: {x: 1.9548035, y: -209}
   m_SizeDelta: {x: 117.3129, y: 61.9161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058416241
